@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8C32FB121D54FFF5009B06E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FB111D54FFF5009B06E3 /* AppDelegate.swift */; };
-		8C32FB141D54FFF5009B06E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FB131D54FFF5009B06E3 /* ViewController.swift */; };
 		8C32FB171D54FFF5009B06E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C32FB151D54FFF5009B06E3 /* Main.storyboard */; };
 		8C32FB191D54FFF5009B06E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C32FB181D54FFF5009B06E3 /* Assets.xcassets */; };
-		8C32FB1C1D54FFF5009B06E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C32FB1A1D54FFF5009B06E3 /* LaunchScreen.storyboard */; };
 		8C32FB271D54FFF5009B06E3 /* GiraffeTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FB261D54FFF5009B06E3 /* GiraffeTableTests.swift */; };
 		8C32FB321D54FFF5009B06E3 /* GiraffeTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FB311D54FFF5009B06E3 /* GiraffeTableUITests.swift */; };
+		8C32FB401D55007E009B06E3 /* CommandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FB3F1D55007E009B06E3 /* CommandTableViewCell.swift */; };
+		8C32FB421D5500D6009B06E3 /* CommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FB411D5500D6009B06E3 /* CommandTableViewController.swift */; };
+		8C32FB441D550268009B06E3 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FB431D550268009B06E3 /* Command.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +37,8 @@
 /* Begin PBXFileReference section */
 		8C32FB0E1D54FFF5009B06E3 /* GiraffeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiraffeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C32FB111D54FFF5009B06E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C32FB131D54FFF5009B06E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C32FB161D54FFF5009B06E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C32FB181D54FFF5009B06E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8C32FB1B1D54FFF5009B06E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C32FB1D1D54FFF5009B06E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C32FB221D54FFF5009B06E3 /* GiraffeTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiraffeTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C32FB261D54FFF5009B06E3 /* GiraffeTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiraffeTableTests.swift; sourceTree = "<group>"; };
@@ -47,6 +46,9 @@
 		8C32FB2D1D54FFF5009B06E3 /* GiraffeTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiraffeTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C32FB311D54FFF5009B06E3 /* GiraffeTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiraffeTableUITests.swift; sourceTree = "<group>"; };
 		8C32FB331D54FFF6009B06E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C32FB3F1D55007E009B06E3 /* CommandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandTableViewCell.swift; sourceTree = "<group>"; };
+		8C32FB411D5500D6009B06E3 /* CommandTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandTableViewController.swift; sourceTree = "<group>"; };
+		8C32FB431D550268009B06E3 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				8C32FB111D54FFF5009B06E3 /* AppDelegate.swift */,
-				8C32FB131D54FFF5009B06E3 /* ViewController.swift */,
 				8C32FB151D54FFF5009B06E3 /* Main.storyboard */,
 				8C32FB181D54FFF5009B06E3 /* Assets.xcassets */,
-				8C32FB1A1D54FFF5009B06E3 /* LaunchScreen.storyboard */,
 				8C32FB1D1D54FFF5009B06E3 /* Info.plist */,
+				8C32FB3F1D55007E009B06E3 /* CommandTableViewCell.swift */,
+				8C32FB411D5500D6009B06E3 /* CommandTableViewController.swift */,
+				8C32FB431D550268009B06E3 /* Command.swift */,
 			);
 			path = GiraffeTable;
 			sourceTree = "<group>";
@@ -229,7 +232,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C32FB1C1D54FFF5009B06E3 /* LaunchScreen.storyboard in Resources */,
 				8C32FB191D54FFF5009B06E3 /* Assets.xcassets in Resources */,
 				8C32FB171D54FFF5009B06E3 /* Main.storyboard in Resources */,
 			);
@@ -256,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C32FB141D54FFF5009B06E3 /* ViewController.swift in Sources */,
 				8C32FB121D54FFF5009B06E3 /* AppDelegate.swift in Sources */,
+				8C32FB421D5500D6009B06E3 /* CommandTableViewController.swift in Sources */,
+				8C32FB441D550268009B06E3 /* Command.swift in Sources */,
+				8C32FB401D55007E009B06E3 /* CommandTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +303,6 @@
 				8C32FB161D54FFF5009B06E3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8C32FB1A1D54FFF5009B06E3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C32FB1B1D54FFF5009B06E3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -484,6 +480,7 @@
 				8C32FB381D54FFF6009B06E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C32FB391D54FFF6009B06E3 /* Build configuration list for PBXNativeTarget "GiraffeTableTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +489,7 @@
 				8C32FB3B1D54FFF6009B06E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C32FB3C1D54FFF6009B06E3 /* Build configuration list for PBXNativeTarget "GiraffeTableUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +498,7 @@
 				8C32FB3E1D54FFF6009B06E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
