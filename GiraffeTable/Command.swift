@@ -10,14 +10,16 @@ import Foundation
 
 class Command {
     
+    var sectionName: String
     var command: String
     var keys: String
     
-    init?(command: String, keys:String) {
+    init?(sectionName:String, command:String, keys:String) {
+        self.sectionName = sectionName
         self.command = command
         self.keys = keys
         
-        if command.isEmpty || keys.isEmpty {
+        if command.isEmpty || keys.isEmpty || sectionName.isEmpty {
             return nil
         }
     }

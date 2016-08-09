@@ -22,24 +22,27 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlK-rX-Ojf">
-                                            <rect key="frame" x="317" y="7" width="275" height="73.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja6-2A-v8T">
+                                            <rect key="frame" x="8" y="8" width="584" height="53"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja6-2A-v8T">
-                                            <rect key="frame" x="29" y="7" width="153" height="73.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlK-rX-Ojf">
+                                            <rect key="frame" x="8" y="61" width="584" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="qlK-rX-Ojf" firstAttribute="leading" secondItem="Ja6-2A-v8T" secondAttribute="trailing" constant="1" id="4Dk-rh-GRP"/>
-                                        <constraint firstItem="Ja6-2A-v8T" firstAttribute="top" secondItem="Xbi-1J-Vmd" secondAttribute="topMargin" constant="1" id="8gb-La-kdt"/>
-                                        <constraint firstItem="Ja6-2A-v8T" firstAttribute="leading" secondItem="Xbi-1J-Vmd" secondAttribute="leadingMargin" constant="1" id="NGa-0h-kd8"/>
-                                        <constraint firstItem="qlK-rX-Ojf" firstAttribute="trailing" secondItem="Xbi-1J-Vmd" secondAttribute="trailingMargin" constant="1" id="bSp-ag-q4M"/>
+                                        <constraint firstItem="qlK-rX-Ojf" firstAttribute="top" secondItem="Ja6-2A-v8T" secondAttribute="bottom" id="5ea-PF-IWw"/>
+                                        <constraint firstItem="Ja6-2A-v8T" firstAttribute="leading" secondItem="Xbi-1J-Vmd" secondAttribute="leadingMargin" id="6H1-2W-gV4"/>
+                                        <constraint firstItem="qlK-rX-Ojf" firstAttribute="leading" secondItem="Xbi-1J-Vmd" secondAttribute="leadingMargin" id="6TS-hK-ZWK"/>
+                                        <constraint firstItem="Ja6-2A-v8T" firstAttribute="trailing" secondItem="Xbi-1J-Vmd" secondAttribute="trailingMargin" id="AED-N6-0Co"/>
+                                        <constraint firstItem="Ja6-2A-v8T" firstAttribute="top" secondItem="Xbi-1J-Vmd" secondAttribute="topMargin" id="CP6-f0-xy1"/>
+                                        <constraint firstItem="qlK-rX-Ojf" firstAttribute="bottom" secondItem="Xbi-1J-Vmd" secondAttribute="bottomMargin" id="pcV-OZ-LJY"/>
+                                        <constraint firstItem="qlK-rX-Ojf" firstAttribute="trailing" secondItem="Xbi-1J-Vmd" secondAttribute="trailingMargin" id="r4l-NY-isX"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="commandTableCell">

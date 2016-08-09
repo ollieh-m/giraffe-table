@@ -10,11 +10,17 @@ import UIKit
 
 class CommandTableViewController: UITableViewController {
     
-    var commands = [Command]()
+    var sectionsArray = [Section]()
+    let screenBounds:CGSize = UIScreen.mainScreen().bounds.size
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadCommands()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+        tableView.tableHeaderView = IntroView()
+        
+        sectionsArray = SectionsBuilder().load()
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,27 +28,21 @@ class CommandTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadCommands() {
-        let command1 = Command(command:"Read all", keys:"Control and Option and A")!
-        let command2 = Command(command:"Read from cursor to bottom", keys: "Control and Option and A when interacting with text")!
-        commands += [command1,command2]
-    }
-    
-    // MARK: - Table view data source
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return sectionsArray.count
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return commands.count
+        return sectionsArray[section].items.count
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? { return sectionsArray[section].header
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "commandTableCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CommandTableViewCell
-        let command = commands[indexPath.row]
+        let command = sectionsArray[indexPath.section].items[indexPath.row]
         cell.commandLabel.text = command.command
         cell.keysLabel.text = command.keys
         return cell
