@@ -13,8 +13,6 @@ class CommandTableViewController: UITableViewController {
     var sectionsArray = [Section]()
     let screenBounds:CGSize = UIScreen.mainScreen().bounds.size
     
-    @IBOutlet weak var IntroViewLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

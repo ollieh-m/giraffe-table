@@ -11,14 +11,16 @@ import UIKit
 class IntroView: UIView {
     
     let screenBounds:CGSize = UIScreen.mainScreen().bounds.size
+    let topMargin = 35 as CGFloat
+    let bottomMargin = 25 as CGFloat
     var introLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame:frame)
+        
         //set label with fixed width but height and lines adjusted using sizeToFit
-        let topMargin = 35 as CGFloat
-        let bottomMargin = 25 as CGFloat
-        formatLabel(topMargin, withBottomMargin: bottomMargin)
+        formatLabel(topMargin)
+        
         //set containing view's dimensions using introLabel's height
         self.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: introLabel.frame.height + topMargin + bottomMargin)
     }
@@ -27,7 +29,7 @@ class IntroView: UIView {
         super.init(coder: aDecoder)
     }
     
-    func formatLabel(withTopMargin:CGFloat, withBottomMargin:CGFloat) {
+    func formatLabel(withTopMargin:CGFloat) {
         introLabel.lineBreakMode = .ByWordWrapping
         introLabel.numberOfLines = 0
         introLabel.text = "This is a simple list or 'cheatsheet' for all VoiceOver commands. Start with the basics, and later learn advanced commands to navigate your device faster."
