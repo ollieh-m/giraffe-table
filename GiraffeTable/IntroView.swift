@@ -16,20 +16,22 @@ class IntroView: UIView {
     override init(frame: CGRect) {
         super.init(frame:frame)
         //set label with fixed width but height and lines adjusted using sizeToFit
-        formatLabel()
+        let topMargin = 35 as CGFloat
+        let bottomMargin = 25 as CGFloat
+        formatLabel(topMargin, withBottomMargin: bottomMargin)
         //set containing view's dimensions using introLabel's height
-        self.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: introLabel.frame.height)
+        self.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: introLabel.frame.height + topMargin + bottomMargin)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func formatLabel() {
+    func formatLabel(withTopMargin:CGFloat, withBottomMargin:CGFloat) {
         introLabel.lineBreakMode = .ByWordWrapping
         introLabel.numberOfLines = 0
-        introLabel.text = "Lots of text here taking up lenty of space bla bla as much as needed"
-        introLabel.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: 0)
+        introLabel.text = "This is a simple list or 'cheatsheet' for all VoiceOver commands. Start with the basics, and later learn advanced commands to navigate your device faster."
+        introLabel.frame = CGRect(x: 0, y: withTopMargin, width: screenBounds.width, height: 0)
         introLabel.sizeToFit()
         introLabel.frame.size = introLabel.bounds.size
         addSubview(introLabel)
