@@ -10,20 +10,29 @@ import UIKit
 
 class IntroView: UIView {
     
-    let label = UILabel()
+    let screenBounds:CGSize = UIScreen.mainScreen().bounds.size
+    var introLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame:frame)
-        self.frame = CGRect(x: 0, y: 0, width: 600, height: 50)
-        self.backgroundColor = UIColor.greenColor()
-        label.frame = CGRect(x: 0, y: 0, width: 600, height: 50)
-        label.text = "Intro text here"
-        label.textColor = UIColor.blackColor()
-        addSubview(label)
+        //set label with fixed width but height and lines adjusted using sizeToFit
+        formatLabel()
+        //set containing view's dimensions using introLabel's height
+        self.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: introLabel.frame.height)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func formatLabel() {
+        introLabel.lineBreakMode = .ByWordWrapping
+        introLabel.numberOfLines = 0
+        introLabel.text = "Lots of text here taking up lenty of space bla bla as much as needed"
+        introLabel.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: 0)
+        introLabel.sizeToFit()
+        introLabel.frame.size = introLabel.bounds.size
+        addSubview(introLabel)
     }
 
 }
